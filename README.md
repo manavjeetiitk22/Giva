@@ -8,6 +8,6 @@ giva-beta.vercel.app/
 1. In the Giva-frontend repo go to src/App.js and uncomment the server = 'http://localhost:5000' and comment the above URL
 2. In the Giva-Backend(https://github.com/manavjeetiitk22/giva-_backend) go to the .env and and uncomment the FRONTENT_URL=http://localhost:3000 and comment the above FRONTENT_URL\
 
-- cd into backend folder
+- cd into frontend folder
 - run `npm i` to install dependencies
-- run `node app.js` to start the backend server
+- run `node start` to start the backend server
