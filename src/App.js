@@ -51,17 +51,7 @@ const deleteProduct = async (id) => {
     console.error('Error deleting product:', error);
   }
 };
-// return (
-//   <div className="container">
-//     <h1 className="mt-4">Product Management System</h1>
-//     <ProductForm addProduct={addProduct} />
-//     <ProductList
-//       products={products}
-//       updateProduct={updateProduct}
-//       deleteProduct={deleteProduct}
-//       /> 
-//   </div>
-// ); 
+
 return (
   <div className="max-w-4xl mx-auto p-6 space-y-6">
     {/* <h1 className="text-3xl font-semibold text-center text-gray-800 mb-6">Product Management System</h1> */}

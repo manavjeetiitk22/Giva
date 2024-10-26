@@ -39,7 +39,6 @@ const Product = ({ product, updateProduct, deleteProduct }) => {
         </td>
       </tr>
 
-      {/* Modal for Editing Product */}
       {showModal && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white p-6 rounded-lg shadow-lg">
