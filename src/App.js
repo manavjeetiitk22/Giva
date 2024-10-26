@@ -4,6 +4,8 @@ import ProductForm from './components/ProductForm';
 // import 'tailwindcss/tailwind.css';
 import axios from 'axios';
 
+export const server = 'https://giva-backend.onrender.com';
+
 const App = () => {
   const [products, setProducts] = useState([]);
   // Fetch products from the backend
@@ -13,7 +15,7 @@ const App = () => {
 
 const fetchProducts = async () => {
   try {
-    const response = await axios.get('http://localhost:5000/api/products');
+    const response = await axios.get(`${server}/api/products`);
     setProducts(response.data);
   } catch (error) {
     console.error('Error fetching products:', error);
@@ -22,7 +24,7 @@ const fetchProducts = async () => {
 
 const addProduct = async (newProduct) => {
   try {
-    const response = await axios.post('http://localhost:5000/api/products', newProduct);
+    const response = await axios.post(`${server}/api/products`, newProduct);
     setProducts([...products, response.data]);
   } catch (error) {
     console.error('Error adding product:', error);
@@ -31,7 +33,7 @@ const addProduct = async (newProduct) => {
 
 const updateProduct = async (id, updatedProduct) => {
   try {
-    const response = await axios.put(`http://localhost:5000/api/products/${id}`, updatedProduct);
+    const response = await axios.put(`${server}/api/products/${id}`, updatedProduct);
     const updatedProducts = products.map((product) =>
       product.id === id ? response.data : product
 );
@@ -43,7 +45,7 @@ const updateProduct = async (id, updatedProduct) => {
 
 const deleteProduct = async (id) => {
   try {
-    await axios.delete(`http://localhost:5000/api/products/${id}`);
+    await axios.delete(`${server}/api/products/${id}`);
     setProducts(products.filter((product) => product.id !== id));
   } catch (error) {
     console.error('Error deleting product:', error);
