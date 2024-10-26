@@ -10,4 +10,4 @@ giva-beta.vercel.app/
 
 - cd into frontend folder
 - run `npm i` to install dependencies
-- run `node start` to start the backend server
+- run `npm start` to start the backend server
