@@ -5,6 +5,7 @@ import ProductForm from './components/ProductForm';
 import axios from 'axios';
 
 export const server = 'https://giva-backend.onrender.com';
+// export const server = 'http://localhost:5000';
 
 const App = () => {
   const [products, setProducts] = useState([]);
