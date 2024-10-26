@@ -8,7 +8,6 @@ export const server = 'https://giva-backend.onrender.com';
 
 const App = () => {
   const [products, setProducts] = useState([]);
-  // Fetch products from the backend
   useEffect(() => {
     fetchProducts();
 }, []);
